@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATSPro India — 90+ Score Tech Resume &amp; Portfolio Builder</title>
+  <meta name="description" content="Build an ATS-optimized, single-page tech resume proven to pass screening at top tech companies. Free real-time ATS scoring and instant UPI unlock.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- TOP HEADER / NAV -->
+  <header class="app-header no-print">
+    <div class="header-container">
+      <div class="brand">
+        <div class="brand-logo">⚡</div>
+        <div class="brand-text">
+          <span class="brand-name">ATS<span class="gradient-text">Pro</span> India</span>
+          <span class="brand-tag">Tech Career Suite</span>
+        </div>
+      </div>
+
+      <!-- Quick Preset Selector -->
+      <div class="preset-selector">
+        <label for="sample-select">Load Template:</label>
+        <select id="sample-select">
+          <option value="fresher">🎓 Fresher / CS Graduate (Java + DSA)</option>
+          <option value="fullstack" selected>💻 Full-Stack Web Dev (React + Node)</option>
+          <option value="aiml">🤖 AI / ML Engineer (Python + PyTorch)</option>
+          <option value="devops">☁️ Cloud &amp; DevOps (Docker + AWS)</option>
+        </select>
+      </div>
+
+      <div class="header-actions">
+        <button id="btn-settings" class="btn btn-secondary btn-sm" title="Configure your UPI ID">
+          ⚙️ UPI Settings
+        </button>
+        <button id="btn-print" class="btn btn-primary btn-sm">
+          <span>📄 Download PDF</span>
+          <span class="badge-price">₹49</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ATS LIVE AUDIT SCOREBAR (STICKY) -->
+  <section class="score-banner no-print">
+    <div class="score-container">
+      <div class="score-ring-wrap">
+        <div class="score-badge" id="score-circle">88</div>
+        <div class="score-meta">
+          <div class="score-title">Live ATS Score: <span id="score-status" class="score-green">Excellent (Top 5%)</span></div>
+          <div class="score-desc" id="score-feedback">High action-verb density and quantified impact metrics detected.</div>
+        </div>
+      </div>
+      <div class="score-checks" id="score-checks">
+        <span class="check-pill" id="chk-contact">✓ Contact Info</span>
+        <span class="check-pill" id="chk-skills">✓ Tech Keywords</span>
+        <span class="check-pill" id="chk-verbs">✓ Action Verbs</span>
+        <span class="check-pill" id="chk-metrics">✓ Quantified Metrics</span>
+        <span class="check-pill" id="chk-length">✓ 1-Page Constraint</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN WORKSPACE: BUILDER + PREVIEW -->
+  <main class="main-layout">
+    
+    <!-- LEFT: FORM CONTROLS -->
+    <aside class="builder-pane no-print">
+      <div class="pane-tabs">
+        <button class="pane-tab active" data-tab="tab-personal">👤 Contact</button>
+        <button class="pane-tab" data-tab="tab-summary">📝 Summary</button>
+        <button class="pane-tab" data-tab="tab-skills">⚡ Skills</button>
+        <button class="pane-tab" data-tab="tab-experience">💼 Experience</button>
+        <button class="pane-tab" data-tab="tab-projects">🚀 Projects</button>
+        <button class="pane-tab" data-tab="tab-education">🎓 Education</button>
+      </div>
+
+      <div class="pane-content">
+        <!-- 1. PERSONAL DETAILS -->
+        <div class="tab-pane active" id="tab-personal">
+          <h2 class="section-title">Contact &amp; Social Links</h2>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="input-name">Full Name *</label>
+              <input type="text" id="input-name" placeholder="Durga Prasad" value="Durga Prasad">
+            </div>
+            <div class="form-group">
+              <label for="input-title">Target Role Title *</label>
+              <input type="text" id="input-title" placeholder="Full Stack Software Engineer" value="Full Stack Software Engineer">
+            </div>
+            <div class="form-group">
+              <label for="input-email">Email Address *</label>
+              <input type="email" id="input-email" placeholder="durga@example.com" value="durga.prasad@example.com">
+            </div>
+            <div class="form-group">
+              <label for="input-phone">Phone Number *</label>
+              <input type="text" id="input-phone" placeholder="+91 98765 43210" value="+91 98765 43210">
+            </div>
+            <div class="form-group">
+              <label for="input-location">Location</label>
+              <input type="text" id="input-location" placeholder="Bengaluru, India" value="Bengaluru, India">
+            </div>
+            <div class="form-group">
+              <label for="input-linkedin">LinkedIn Username / URL</label>
+              <input type="text" id="input-linkedin" placeholder="linkedin.com/in/username" value="linkedin.com/in/durga-prasad">
+            </div>
+            <div class="form-group">
+              <label for="input-github">GitHub Username / URL</label>
+              <input type="text" id="input-github" placeholder="github.com/username" value="github.com/i-am-durga">
+            </div>
+            <div class="form-group">
+              <label for="input-portfolio">Portfolio / LeetCode URL</label>
+              <input type="text" id="input-portfolio" placeholder="leetcode.com/username" value="leetcode.com/u/durga_codes">
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. SUMMARY -->
+        <div class="tab-pane" id="tab-summary">
+          <div class="section-header-flex">
+            <h2 class="section-title">Professional Summary</h2>
+            <button type="button" id="btn-ai-summary" class="btn btn-outline btn-xs">⚡ Tech AI Polish</button>
+          </div>
+          <p class="field-hint">Keep under 3 lines. Highlight your primary stack, years of experience/grad year, and tangible engineering impact.</p>
+          <div class="form-group">
+            <textarea id="input-summary" rows="4" placeholder="Brief 2-3 line summary..."></textarea>
+          </div>
+        </div>
+
+        <!-- 3. SKILLS -->
+        <div class="tab-pane" id="tab-skills">
+          <h2 class="section-title">Technical Skills (ATS Grouped)</h2>
+          <p class="field-hint">Categorized skills parse with 98% higher accuracy in Taleo, Workday, and Greenhouse.</p>
+          <div class="form-group">
+            <label for="input-languages">Programming Languages</label>
+            <input type="text" id="input-languages" placeholder="Java, Python, TypeScript, JavaScript, C++, SQL">
+          </div>
+          <div class="form-group">
+            <label for="input-frameworks">Frameworks &amp; Libraries</label>
+            <input type="text" id="input-frameworks" placeholder="React, Next.js, Node.js, Express, Tailwind CSS, Redux">
+          </div>
+          <div class="form-group">
+            <label for="input-tools">Tools &amp; Cloud</label>
+            <input type="text" id="input-tools" placeholder="Git, GitHub, Docker, AWS (S3, EC2), Postman, Linux, Vercel">
+          </div>
+          <div class="form-group">
+            <label for="input-databases">Databases &amp; Architecture</label>
+            <input type="text" id="input-databases" placeholder="PostgreSQL, MongoDB, Redis, REST APIs, Microservices, System Design">
+          </div>
+        </div>
+
+        <!-- 4. EXPERIENCE -->
+        <div class="tab-pane" id="tab-experience">
+          <div class="section-header-flex">
+            <h2 class="section-title">Work Experience / Internships</h2>
+            <button type="button" id="btn-add-exp" class="btn btn-outline btn-xs">+ Add Experience</button>
+          </div>
+          <div id="experience-list"></div>
+        </div>
+
+        <!-- 5. PROJECTS -->
+        <div class="tab-pane" id="tab-projects">
+          <div class="section-header-flex">
+            <h2 class="section-title">Key Projects (High Impact)</h2>
+            <button type="button" id="btn-add-project" class="btn btn-outline btn-xs">+ Add Project</button>
+          </div>
+          <div id="projects-list"></div>
+        </div>
+
+        <!-- 6. EDUCATION & CERTS -->
+        <div class="tab-pane" id="tab-education">
+          <h2 class="section-title">Education &amp; Achievements</h2>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="input-degree">Degree &amp; Major</label>
+              <input type="text" id="input-degree" placeholder="B.Tech in Computer Science & Engineering" value="B.Tech in Computer Science & Engineering">
+            </div>
+            <div class="form-group">
+              <label for="input-college">College / University</label>
+              <input type="text" id="input-college" placeholder="National Institute of Technology" value="Visvesvaraya Technological University">
+            </div>
+            <div class="form-group">
+              <label for="input-grad-year">Graduation Year</label>
+              <input type="text" id="input-grad-year" placeholder="2022 - 2026" value="2022 - 2026">
+            </div>
+            <div class="form-group">
+              <label for="input-cgpa">CGPA / Percentage</label>
+              <input type="text" id="input-cgpa" placeholder="8.7 / 10 CGPA" value="8.7 / 10 CGPA">
+            </div>
+          </div>
+
+          <h3 class="subsection-title" style="margin-top: 20px;">Certifications &amp; Honors</h3>
+          <div class="form-group">
+            <textarea id="input-achievements" rows="3" placeholder="• AWS Certified Cloud Practitioner&#10;• Solved 350+ DSA problems on LeetCode&#10;• Top 5 Finalist in National Hackathon 2026"></textarea>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- RIGHT: LIVE ATS RESUME PREVIEW -->
+    <section class="preview-pane">
+      <div class="preview-toolbar no-print">
+        <span class="preview-status">
+          <span class="status-dot"></span> Live 1-Page Harvard Format Preview
+        </span>
+        <div class="zoom-controls">
+          <button id="btn-zoom-out" class="btn-icon" title="Zoom Out">−</button>
+          <span id="zoom-level">100%</span>
+          <button id="btn-zoom-in" class="btn-icon" title="Zoom In">+</button>
+        </div>
+      </div>
+
+      <div class="paper-container">
+        <!-- THE PRINTABLE RESUME (HARVARD/TECH CLEAN STANDARD) -->
+        <article class="resume-sheet" id="resume-sheet">
+          
+          <!-- RESUME HEADER -->
+          <header class="resume-header">
+            <h1 class="resume-name" id="cv-name">Durga Prasad</h1>
+            <p class="resume-target-role" id="cv-title">Full Stack Software Engineer</p>
+            <div class="resume-contacts" id="cv-contacts">
+              <span id="cv-email">durga.prasad@example.com</span>
+              <span class="divider">|</span>
+              <span id="cv-phone">+91 98765 43210</span>
+              <span class="divider">|</span>
+              <span id="cv-location">Bengaluru, India</span>
+              <span class="divider">|</span>
+              <a id="cv-linkedin" href="#" target="_blank">linkedin.com/in/durga-prasad</a>
+              <span class="divider">|</span>
+              <a id="cv-github" href="#" target="_blank">github.com/i-am-durga</a>
+              <span class="divider">|</span>
+              <a id="cv-portfolio" href="#" target="_blank">leetcode.com/u/durga_codes</a>
+            </div>
+          </header>
+
+          <!-- SUMMARY -->
+          <section class="cv-section" id="cv-sec-summary">
+            <h2 class="cv-section-title">Professional Summary</h2>
+            <div class="cv-rule"></div>
+            <p class="cv-summary-text" id="cv-summary"></p>
+          </section>
+
+          <!-- TECHNICAL SKILLS -->
+          <section class="cv-section" id="cv-sec-skills">
+            <h2 class="cv-section-title">Technical Skills</h2>
+            <div class="cv-rule"></div>
+            <div class="cv-skills-grid">
+              <div class="skill-row">
+                <strong class="skill-label">Languages:</strong>
+                <span class="skill-items" id="cv-languages"></span>
+              </div>
+              <div class="skill-row">
+                <strong class="skill-label">Frameworks &amp; Libraries:</strong>
+                <span class="skill-items" id="cv-frameworks"></span>
+              </div>
+              <div class="skill-row">
+                <strong class="skill-label">Tools &amp; Cloud:</strong>
+                <span class="skill-items" id="cv-tools"></span>
+              </div>
+              <div class="skill-row">
+                <strong class="skill-label">Databases &amp; Architecture:</strong>
+                <span class="skill-items" id="cv-databases"></span>
+              </div>
+            </div>
+          </section>
+
+          <!-- EXPERIENCE -->
+          <section class="cv-section" id="cv-sec-experience">
+            <h2 class="cv-section-title">Professional Experience</h2>
+            <div class="cv-rule"></div>
+            <div id="cv-experience-entries"></div>
+          </section>
+
+          <!-- PROJECTS -->
+          <section class="cv-section" id="cv-sec-projects">
+            <h2 class="cv-section-title">Technical Projects</h2>
+            <div class="cv-rule"></div>
+            <div id="cv-project-entries"></div>
+          </section>
+
+          <!-- EDUCATION -->
+          <section class="cv-section" id="cv-sec-education">
+            <h2 class="cv-section-title">Education</h2>
+            <div class="cv-rule"></div>
+            <div class="edu-entry">
+              <div class="cv-entry-header">
+                <div>
+                  <strong class="cv-institution" id="cv-college">Visvesvaraya Technological University</strong>
+                  <span class="cv-degree" id="cv-degree"> — B.Tech in Computer Science &amp; Engineering</span>
+                </div>
+                <div class="cv-date" id="cv-grad-year">2022 - 2026</div>
+              </div>
+              <div class="cv-grade">CGPA: <span id="cv-cgpa">8.7 / 10 CGPA</span></div>
+            </div>
+          </section>
+
+          <!-- HONORS / CERTIFICATIONS -->
+          <section class="cv-section" id="cv-sec-achievements">
+            <h2 class="cv-section-title">Achievements &amp; Certifications</h2>
+            <div class="cv-rule"></div>
+            <ul class="cv-bullets" id="cv-achievements-list"></ul>
+          </section>
+
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- UPI PAYMENT MODAL (NO-PRINT) -->
+  <div class="modal-overlay no-print" id="upi-modal">
+    <div class="modal-card">
+      <button class="modal-close" id="btn-close-modal">&times;</button>
+      <div class="modal-header">
+        <div class="modal-badge">Instant Pro PDF Unlock</div>
+        <h3>Download High-Resolution ATS Resume</h3>
+        <p class="modal-sub">Guaranteed 1-page single-pass ATS format. Zero watermark. Instant download.</p>
+      </div>
+
+      <div class="payment-box">
+        <div class="price-tag">
+          <span class="original-price">₹199</span>
+          <span class="sale-price" id="modal-sale-price">₹49</span>
+          <span class="discount-badge">75% OFF</span>
+        </div>
+
+        <div class="qr-wrapper">
+          <img id="upi-qr-image" src="" alt="Scan UPI QR Code to pay" width="180" height="180">
+          <div class="qr-hint">Scan with any UPI App: GPay, PhonePe, Paytm, CRED</div>
+        </div>
+
+        <!-- Mobile Quick-Pay Button -->
+        <a id="upi-mobile-btn" href="#" class="btn btn-upi btn-block">
+          ⚡ Pay <span id="btn-upi-amount">₹49</span> via PhonePe / GPay
+        </a>
+
+        <div class="utr-section">
+          <label for="input-utr">Enter UPI Ref / UTR No (or click Instant Unlock):</label>
+          <div class="utr-input-group">
+            <input type="text" id="input-utr" placeholder="e.g. 427819827391">
+            <button id="btn-verify-unlock" class="btn btn-success">Verify &amp; Print</button>
+          </div>
+          <div class="demo-bypass">
+            <button id="btn-instant-demo" class="link-btn">Testing Mode: Click for Instant Free Unlock</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SETTINGS MODAL (CONFIG UPI ID) -->
+  <div class="modal-overlay no-print" id="settings-modal">
+    <div class="modal-card">
+      <button class="modal-close" id="btn-close-settings">&times;</button>
+      <div class="modal-header">
+        <div class="modal-badge">Creator Monetization</div>
+        <h3>Configure Your UPI ID</h3>
+        <p class="modal-sub">Enter your GPay/PhonePe UPI ID. All customer payments will land directly in your personal bank account!</p>
+      </div>
+
+      <div class="settings-form">
+        <div class="form-group">
+          <label for="cfg-upi-id">Your UPI ID (VPA) *</label>
+          <input type="text" id="cfg-upi-id" placeholder="e.g. yourname@okaxis or yourphone@paytm">
+        </div>
+        <div class="form-group">
+          <label for="cfg-payee-name">Your Display Name</label>
+          <input type="text" id="cfg-payee-name" placeholder="e.g. Durga Prasad">
+        </div>
+        <div class="form-group">
+          <label for="cfg-amount">Price per Download (INR)</label>
+          <input type="number" id="cfg-amount" value="49" min="9" max="999">
+        </div>
+
+        <button id="btn-save-settings" class="btn btn-primary btn-block">Save Configuration</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
