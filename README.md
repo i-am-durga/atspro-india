@@ -1,4 +1,4 @@
-# 🚀 ATSPro India — Zero-Cost Indian Tech Startup (₹1,000/day Blueprint)
+# 🚀 ATSPro India - Zero-Cost Indian Tech Startup (₹1,000/day Blueprint)
 
 > **Live, High-Conversion ATS Resume Builder & Career Suite for Indian Job Seekers & Engineering Students.**  
 > **Operational Cost:** ₹0 / month (Hosted on GitHub Pages / Vercel).  
@@ -6,7 +6,7 @@
 
 ---
 
-## 💡 How this Makes ₹1,000 Every Day
+## 💰 How this Makes ₹1,000 Every Day
 
 In India, over **15 lakh engineering & BCA/MCA graduates pass out annually**, and **90% of resumes fail automated ATS screeners** at TCS, Infosys, Wipro, Cognizant, and product startups because of poor formatting, missing metrics, and weak action verbs.
 
@@ -16,7 +16,7 @@ In India, over **15 lakh engineering & BCA/MCA graduates pass out annually**, an
 
 ---
 
-## 🌟 Key Features
+## ✨ Key Features
 
 1. **Instant Real-Time 100-Point ATS Scorer**:
    - Analyzes action verbs (*Engineered, Architected, Spearheaded, Optimized*).
@@ -41,7 +41,7 @@ In India, over **15 lakh engineering & BCA/MCA graduates pass out annually**, an
 
 ---
 
-## 🛠️ How to Set Your UPI ID (Receive Money in Your Bank)
+## 💳 How to Set Your UPI ID (Receive Money in Your Bank)
 
 1. Open `app.js` and locate line 5:
    ```javascript
@@ -51,7 +51,7 @@ In India, over **15 lakh engineering & BCA/MCA graduates pass out annually**, an
 
 ---
 
-## 🌐 1-Minute Zero-Cost Deployment
+## ⚡ 1-Minute Zero-Cost Deployment
 
 ### Method 1: GitHub Pages (100% Free Forever)
 1. Go to your repository on GitHub (`i-am-durga/atspro-india`).
@@ -81,11 +81,11 @@ You do **NOT** need paid ads to get 20 buyers a day. Use these 3 channels:
 
 ---
 
-## 💻 Tech Stack
+## 🛠️ Tech Stack
 - Pure Vanilla HTML5 & CSS3 (Modern Glassmorphic UI & Print Engine)
 - Reactive Vanilla ES6+ JavaScript (Zero npm dependencies, 100% client-side)
 - Dynamic QR Generation via QRServer API (No backend required)
 
 ---
 
-Developed with ❤️ for Indian Tech Job Seekers.
+Developed with ❤️ for Indian Tech Job Seekers by [Durga Prasad Sah](https://github.com/i-am-durga).
